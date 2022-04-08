@@ -1,0 +1,111 @@
+<div mat-dialog-title>
+  <div class="row">
+    <div class="col">
+      <mat-icon style="font-size: 35px;">text_snippet</mat-icon>
+    </div>
+    <div class="col"><span>Load Number:</span></div>
+  </div>
+</div>
+<div mat-dialog-content>
+  <div>
+    <div class="row">
+      <div class="col s10">
+        <div class="pb-3 mt-2">
+          <mat-radio-group color="primary" (change)="selectInputType()" [(ngModel)]="type"
+            aria-label="Select an option">
+            <div class="p-1 m-1" *ngIf="this.load_array['ov_number'] || !selected">
+              <mat-radio-button value="ov_number">OV
+              </mat-radio-button>
+            </div>
+            <div class="p-1 m-1" *ngIf="this.load_array['claim_number'] || !selected">
+              <mat-radio-button value="claim">Claim</mat-radio-button>
+            </div>
+            <div class="p-1 m-1" *ngIf="this.load_array['material_number'] || !selected">
+              <mat-radio-button value="material">Material
+              </mat-radio-button>
+            </div>
+            <div class="p-1 m-1" *ngIf="this.load_array['config_number'] || !selected">
+              <mat-radio-button value="config_number">Agrupador
+              </mat-radio-button>
+            </div>
+          </mat-radio-group>
+        </div>
+      </div>
+      <div class="col s2" *ngIf="selected">
+        <button type='button' (click)="changeType()" mat-button color="primary">Trocar</button>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="this.load_array['ov_number']">
+      <div *ngFor="let item of this.load_array['ov_number']">
+        <div class="col s8">
+          <mat-form-field appearance="fill">
+            <mat-label>Ov</mat-label>
+            <input type="number" (ngModelChange)="test()" [(ngModel)]="item.ov_number" matInput>
+            <mat-error>
+              insira um OV válida.
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col s4">
+          <mat-form-field appearance="fill">
+            <mat-label>Item</mat-label>
+            <input type="number" (ngModelChange)="test()" [(ngModel)]="item.ov_item" matInput>
+            <mat-error>
+              insira um Item válido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="this.load_array['material_number']">
+      <div *ngFor="let item of this.load_array['material_number']">
+        <div class="col s12">
+          <mat-form-field appearance="fill">
+            <mat-label>Material</mat-label>
+            <input type="number" (ngModelChange)="test()" [(ngModel)]="item.material_number" matInput>
+            <mat-error>
+              insira um material válido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="this.load_array['claim_number']">
+      <div *ngFor="let item of this.load_array['claim_number']">
+        <div class="col s12">
+          <mat-form-field appearance="fill">
+            <mat-label>Claim</mat-label>
+            <input type="number" (ngModelChange)="test()" [(ngModel)]="item.claim_number" matInput>
+            <mat-error>
+              insira um claim válido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="this.load_array['config_number']">
+      <div *ngFor="let item of this.load_array['config_number']">
+        <div class="col s12">
+          <mat-form-field appearance="fill">
+            <mat-label>Agrupador</mat-label>
+            <input type="number" (ngModelChange)="test()" [(ngModel)]="item.config_number" matInput>
+            <mat-error>
+              insira um agrupador válido.
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <button mat-button *ngIf="selected" (click)="newInsert()" color="primary">Inserir novo</button>
+  </div>
+
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-raised-button mat-dialog-close (click)="selectInputType()" color="primary">Send</button>
+</div>

@@ -1,0 +1,96 @@
+thead {
+    white-space: nowrap;
+}
+
+.mat-tab-label {
+    margin: .75rem;
+    margin-top: .5rem;
+    margin-bottom: 0;
+    background-color: #eeeeee;
+    width: unset!important;
+    border-radius: 2px 2px 0 0;
+    color: #00579D!important;
+    opacity: 1!important;
+}
+
+.mat-tab-label:hover {
+    box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.mat-tab-label-active {
+    font-weight: bold;
+    background-color: #c0c0c0!important;
+    color: #00008b;
+}
+
+.tab a {
+    margin: .5rem!important;
+    background-color: #eeeeee;
+    width: unset!important;
+    border-radius: 2px 2px 0 0;
+}
+
+.tab a:hover {
+    box-shadow: 0 8px 17px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.tabs {
+    height: fit-content!important;
+}
+
+.tab .active {
+    font-weight: bold;
+    background-color: #c0c0c0!important;
+    color: #00008b;
+}
+
+.tabs .tab a {
+    color: #00579D!important;
+}
+
+.tabs .indicator {
+    background-color: #00579D!important;
+}
+
+table.highlight>tbody>tr:hover {
+    background-color: rgba(242, 242, 242, 0.95)!important;
+}
+
+
+tr {
+    border-bottom: unset;
+}
+
+tr td {
+    border: 1px solid rgb(0 0 0 / 5%);
+}
+
+td {
+    padding: 5px;
+}
+
+table th {
+    position: sticky;
+    top: -1px;
+    z-index: 10;
+    border-top: 0;
+    background: #ededed;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00579D!important;
+    margin: 0;
+}
+
+.mat-calendar-table-header th {
+    border-top: 0;
+    background: white !important;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00579D!important;
+}
+
+.mat-calendar-abbr {
+    text-decoration: none!important;
+}

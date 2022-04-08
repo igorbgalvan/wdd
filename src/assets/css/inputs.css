@@ -1,0 +1,45 @@
+
+.mat-form-field input:not([type]), .mat-form-field input[type=text]:not(.browser-default), .mat-form-field input[type=password]:not(.browser-default), .mat-form-field input[type=email]:not(.browser-default), .mat-form-field input[type=url]:not(.browser-default), .mat-form-field input[type=time]:not(.browser-default), .mat-form-field input[type=date]:not(.browser-default), .mat-form-field input[type=datetime]:not(.browser-default), .mat-form-field input[type=datetime-local]:not(.browser-default), .mat-form-field input[type=tel]:not(.browser-default), .mat-form-field input[type=number]:not(.browser-default), .mat-form-field input[type=search]:not(.browser-default), textarea.materialize-textarea {
+    background-color: transparent;
+    border: unset;
+    outline: none;
+    height: unset;
+    width: 100%;
+    font-size: unset;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    transition: unset;
+}
+
+.mat-form-field input:not([type]):focus:not([readonly]), .mat-form-field input[type=text]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=password]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=email]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=url]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=time]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=date]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=datetime]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=datetime-local]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=tel]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=number]:not(.browser-default):focus:not([readonly]), .mat-form-field input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: unset;
+    box-shadow: unset;
+}
+
+.mat-input-element:disabled, .mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+    color: rgba(0, 0, 0, 0.78);
+}
+
+.mat-select-disabled .mat-select-value {
+    color: rgba(0, 0, 0, .78);
+}
+
+input:disabled {
+    color: rgba(0, 0, 0, .78)!important;
+}
+
+/* ================== REMOVE INPUT NUMBER ARROWS ============ */
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
